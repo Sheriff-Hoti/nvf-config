@@ -84,6 +84,15 @@
             lspkind.enable = true;
           };
 
+          autocomplete = {
+            blink-cmp = {
+              enable = true;
+              friendly-snippets.enable = true;
+            };
+          };
+
+          snippets.luasnip.enable = true;
+
           languages = {
             enableTreesitter = true;
             enableFormat = true;
