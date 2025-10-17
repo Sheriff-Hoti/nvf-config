@@ -147,7 +147,11 @@
 
       # Concrete outputs for each system assembled from helpers above.
       perSystem =
-        { system, pkgs, ... }:
+        {
+          system,
+          pkgs,
+          ...
+        }:
         let
           neovimCfg = self.lib.mkNeovim pkgs;
         in
