@@ -115,7 +115,11 @@
                   package = pkgs.alejandra;
                   type = "alejandra";
                 };
-                lsp.enable = true;
+                lsp = {
+                  enable = true;
+                  package = pkgs.nixd;
+                  server = "nixd";
+                };
                 treesitter.enable = true;
               };
               # Lua stack for authoring Neovim configuration.
@@ -175,7 +179,7 @@
           devShells.default = pkgs.mkShell {
             packages = [
               neovimCfg.neovim
-              pkgs.nil
+              pkgs.nixd
               pkgs.ruff
             ];
           };
